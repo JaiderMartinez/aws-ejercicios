@@ -1,6 +1,7 @@
 # aws-ejercicios
 
 El metodo para usar la autenticacion de cognito con spring boot y el sdk de JAVA es:
+
 public static InitiateAuthResponse signIn(CognitoIdentityProviderClient identityProviderClient, String username,
 			String password) {
 		try {
