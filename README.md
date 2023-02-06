@@ -4,11 +4,13 @@ El metodo para usar la autenticacion de cognito con spring boot y el sdk de JAVA
 
 public static InitiateAuthResponse signIn(CognitoIdentityProviderClient identityProviderClient, String username,
 			String password) {
+			
 		try {
 			Map<String, String> authParameters = new HashMap<>();
 			authParameters.put("USERNAME", username);
 			authParameters.put("PASSWORD", password);
-			InitiateAuthRequest authRequest = InitiateAuthRequest.builder().clientId("6641hk7g0mov9hfvmujlmdv8hm")//el codigo es la aplicacion del cliente de cognito
+			InitiateAuthRequest authRequest = InitiateAuthRequest.builder().clientId("6641hk7g0mov9hfvmujlmdv8hm")
+			//el codigo es la aplicacion del cliente de cognito
 					.authParameters(authParameters).authFlow(AuthFlowType.USER_PASSWORD_AUTH).build();
 
 			InitiateAuthResponse response = identityProviderClient.initiateAuth(authRequest);
