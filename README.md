@@ -1,8 +1,15 @@
-# aws-ejercicios
+# aws ejercicios
+
+[![AWS Cognito](https://img.shields.io/badge/AWS-Cognito-orange?logo=amazon-aws&logoColor=white)](https://aws.amazon.com/cognito/)
+
+
+## Cognito
+
+Amazon Cognito es un servicio de AWS (Amazon Web Services) que proporciona capacidades de autenticación, autorización y administración de usuarios para aplicaciones web y móviles. Permite a los desarrolladores agregar fácilmente funciones de registro, inicio de sesión y gestión de usuarios a sus aplicaciones sin tener que desarrollar todo el backend desde cero.
 
 El metodo para usar la autenticacion de cognito con spring boot y el sdk de JAVA es:
 
-public static InitiateAuthResponse signIn(CognitoIdentityProviderClient identityProviderClient, String username,
+	public static InitiateAuthResponse signIn(CognitoIdentityProviderClient identityProviderClient, String username,
 			String password) {
 			
 		try {
@@ -24,4 +31,4 @@ public static InitiateAuthResponse signIn(CognitoIdentityProviderClient identity
 		}
 
 		return null;
-}
+	}
